@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bienvenido al juego</title>
+	<style type="text/css">
+		.image{position: relative;}
+
+		.draggable { width: 150px; height: 150px; padding: 0.5em; position: absolute; }
+	</style>
+	<link rel="stylesheet" href="./jquery-ui.css">
+  	<link rel="stylesheet" href="./style.css">
+  	<script src="./jquery-1.12.4.js"></script>
+ 	<script src="./jquery-ui.js"></script>
+ 	<script>
+  $( function() {
+    $( ".draggable" ).draggable();
+  } );
+  </script>
+</head>
+<body>
+<div class="image" >
+	<div id="img1" class="draggable" >
+		<img src="img1.png" >
+	</div>
+	<div id="img2"class="draggable "  >
+		<img src="img2.png" >
+	</div>
+	<div id="img3" class="draggable " >
+		<img src="img3.png">
+	</div>
+	<div id="img4" class="draggable "  >
+		<img src="img4.png" >
+	</div>
+	<div id="img5" class="draggable " >
+		<img src="img5.png" >
+	</div>
+	<div id="img6" class="draggable " >
+		<img src="img6.png" >
+	</div>
+	<div id="img7" class="draggable ">
+		<img src="img7.png" >
+	</div>
+	<div id="img8" class="draggable " >
+		<img src="img8.png" >
+	</div>
+	<div id="img9" class="draggable " >
+		<img src="img9.png" >
+	</div>
+	<div id="img10" class="draggable " >
+		<img src="img10.png" >
+	</div>
+	<div id="img11" class="draggable "  >
+		<img src="img11.png" >
+	</div>
+	<div id="img12" class="draggable " >
+		<img src="img12.png" >
+	</div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var width = $(document).width()-200;
+	var height = $(document).height()-190;
+	console.log(width);
+	console.log(height);
+
+	for (var i = 1 ; i <= 12; i++) {
+	var randomNum = Math.floor(Math.random() * height);
+	var randomNum2 = Math.floor(Math.random() * width);
+
+	document.getElementById("img"+i).style.top = randomNum+"px";
+	document.getElementById("img"+i).style.left = randomNum2+"px";
+	}
+
+
+</script>
